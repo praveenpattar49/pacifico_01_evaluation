@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Military Training VR</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+        }
+
+        header {
+            position: absolute;
+            width: 100%;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #ff6347;
+        }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            color: #f0f0f0;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            background: #333;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background: #ff6347;
+        }
+
+        main {
+            padding: 2rem;
+            margin-top: 5rem;
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: rgba(50, 50, 50, 0.8);
+            border-radius: 8px;
+        }
+
+        section h2 {
+            color: #ff6347;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Military Training VR</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#training">Training</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <p>Welcome to the Military Training VR website, where you can immerse yourself in realistic training environments.</p>
+        </section>
+        <section id="about">
+            <h2>About</h2>
+            <p>Our platform provides cutting-edge virtual reality simulations for military training, enhancing preparedness and effectiveness.</p>
+        </section>
+        <section id="training">
+            <h2>Training</h2>
+            <p>Experience various training modules designed to simulate real-world scenarios, from tactical operations to equipment handling.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Get in touch with us to learn more about our VR training programs and how they can benefit your organization.</p>
+        </section>
+    </main>
+
+    <a-scene embedded style="position: absolute; top: 20%; left: 0; width: 100%; height: 60%;">
+        <!-- Environment -->
+        <a-sky color="#87ceeb"></a-sky>
+        
+        <!-- Ground -->
+        <a-plane position="0 0 -5" rotation="-90 0 0" width="100" height="100" color="#4CAF50"></a-plane>
+        
+        <!-- Example 3D Model -->
+        <a-entity gltf-model="url(https://cdn.aframe.io/test-models/models/buggy/buggy.gltf)" scale="2 2 2" position="0 0 -10"></a-entity>
+        
+        <!-- Camera -->
+        <a-camera position="0 1.6 0">
+            <a-cursor></a-cursor>
+        </a-camera>
+    </a-scene>
+
+    <footer>
+        <p>&copy; 2024 Military Training VR. All rights reserved.</p>
+    </footer>
+</body>
+</html>
